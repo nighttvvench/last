@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 3rd Anniversary - Third Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-color: #fcd5ce;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .letter-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .letter-container h2 {
+            color: #ff758f;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .letter-content {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .photo-holder {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .photo-holder img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+        
+        .photo-holder p {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .audio-controls {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .audio-controls button {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        
+        .nav-button:hover {
+            background-color: #ff8fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-controls">
+        <p>Love Is - The Ridleys</p>
+        <button onclick="toggleAudio()">Play/Pause</button>
+    </div>
+    
+    <div class="letter-container">
+        <h2>Our Journey Together</h2>
+        <div class="letter-content">
+            <p>My love,</p>
+            <p>They say the third year of a relationship is when things truly begin to deepen, and I couldn't agree more. We've weathered storms together, celebrated victories side by side, and built a foundation that feels unshakable.</p>
+            <p>I love the way you laugh at my jokes, even the bad ones. I love how you remember the little things that matter to me. I love our traditions and the new experiences we create together.</p>
+            <p>Every day with you is an adventure—whether we're exploring new places or simply enjoying a quiet evening at home. You make the ordinary extraordinary, and for that, I am forever grateful.</p>
+            <p>Here's to us and the beautiful journey we continue to share.</p>
+            <p>All my love,</p>
+        </div>
+        
+        <div class="photo-gallery">
+            <div class="photo-holder">
+                <img src="photo5.jpg" alt="Memory 5">
+                <p>That surprise party</p>
+            </div>
+            <div class="photo-holder">
+                <img src="photo6.jpg" alt="Memory 6">
+                <p>my pretty baby</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <a href="second.html" class="nav-button">Previous</a>
+        <a href="final.html" class="nav-button">Next</a>
+    </div>
+
+    <audio id="background-music">
+        <source src="love-is.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Audio toggle function
+        function toggleAudio() {
+            const audio = document.getElementById('background-music');
+            
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+                  </html>
