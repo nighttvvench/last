@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 3rd Anniversary - Second Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-color: #f8edeb;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .letter-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .letter-container h2 {
+            color: #ff758f;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .letter-content {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .photo-holder {
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .photo-holder img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+        
+        .photo-holder p {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .audio-controls {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .audio-controls button {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        
+        .nav-button:hover {
+            background-color: #ff8fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-controls">
+        <p>Cold Feet - The Ridleys</p>
+        <button onclick="toggleAudio()">Play/Pause</button>
+    </div>
+    
+    <div class="letter-container">
+        <h2>How You Changed My Life</h2>
+        <div class="letter-content">
+            <p>My dearest,</p>
+            <p>Three years ago, you walked into my life and everything changed. Before you, I was just going through the motions, but you brought color to my world and purpose to my days.</p>
+            <p>You've taught me patience when I was restless, offered comfort when I was troubled, and given me strength when I was weak. With you, I've discovered parts of myself I never knew existed.</p>
+            <p>These past three years have been filled with growth, adventure, and so much joy. From our spontaneous road trips to our quiet evenings at home, every moment with you feels like a gift.</p>
+            <p>Thank you for being my partner, my confidant, and my best friend. Life is infinitely better with you in it.</p>
+            <p>Forever yours,</p>
+        </div>
+        
+        <div class="photo-gallery">
+            <div class="photo-holder">
+                <img src="photo1.jpg" alt="Memory 1">
+                <p>Our first vacation together</p>
+            </div>
+            <div class="photo-holder">
+                <img src="photo2.jpg" alt="Memory 2">
+                <p>The day we moved in</p>
+            </div>
+            <div class="photo-holder">
+                <img src="photo3.jpg" alt="Memory 3">
+                <p>That perfect sunset</p>
+            </div>
+            <div class="photo-holder">
+                <img src="photo4.jpg" alt="Memory 4">
+                <p>Our favorite restaurant</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <a href="index.html" class="nav-button">Previous</a>
+        <a href="third.html" class="nav-button">Next</a>
+    </div>
+
+    <audio id="background-music">
+        <source src="cold-feet.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Audio toggle function
+        function toggleAudio() {
+            const audio = document.getElementById('background-music');
+            
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+  </html>
