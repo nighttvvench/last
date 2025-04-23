@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 3rd Anniversary - Final Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-color: #ffb5a7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .final-message {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .final-message h2 {
+            color: #ff758f;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+        
+        .final-message p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .heart {
+            color: #ff758f;
+            font-size: 40px;
+            margin: 20px 0;
+            animation: pulse 1.5s ease infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .audio-controls {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .audio-controls button {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        
+        .nav-button {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+        
+        .nav-button:hover {
+            background-color: #ff8fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-controls">
+        <p>Be With You - The Ridleys</p>
+        <button onclick="toggleAudio()">Play/Pause</button>
+    </div>
+    
+    <div class="final-message">
+        <h2>Happy 3rd Anniversary!</h2>
+        <div class="heart">❤️</div>
+        <p>Three years of us—of laughter, tears, adventures, and growth. Three years of building a life together that becomes more beautiful with each passing day.</p>
+        <p>They say leather is the traditional gift for a third anniversary, symbolizing durability and flexibility—qualities that have strengthened our bond. Like leather, our relationship has become more supple and resilient with time.</p>
+        <p>Thank you for three incredible years. I can't wait to see what our future holds.</p>
+        <p>I love you more than words can express.</p>
+    </div>
+    
+    <a href="third.html" class="nav-button">Previous</a>
+
+    <audio id="background-music">
+        <source src="be-with-you.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Audio toggle function
+        function toggleAudio() {
+            const audio = document.getElementById('background-music');
+            
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
