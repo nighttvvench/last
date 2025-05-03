@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our 3rd Anniversary - Second Page</title>
+    <title>Our Love Journey</title>
     <style>
         * {
             margin: 0;
@@ -28,7 +28,7 @@
             padding: 30px;
             border-radius: 10px;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
@@ -48,33 +48,45 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             margin: 30px 0;
+            width: 100%;
+            max-width: 900px;
         }
         
         .photo-holder {
             background-color: white;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 200px;
-            height: 240px;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px); /* Two photos per row on mobile */
+            max-width: 220px;
+            height: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .photo-holder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
         
         .photo-holder img {
             width: 100%;
             height: 180px;
             object-fit: cover;
-            background-color: #f0f0f0;
-            margin-bottom: 10px;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            border: 1px solid #f0f0f0;
         }
         
         .photo-holder p {
-            font-size: 12px;
+            font-size: 13px;
             color: #666;
             text-align: center;
+            font-weight: 500;
         }
         
         .audio-controls {
@@ -83,6 +95,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 10px;
         }
         
         .audio-controls button {
@@ -92,7 +105,6 @@
             padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
-            margin: 0 5px;
         }
         
         .navigation {
@@ -118,66 +130,85 @@
         .nav-button:hover {
             background-color: #ff8fa3;
         }
+
+        .anniversary-tag {
+            background-color: #ff758f;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 600px) {
+            .photo-holder {
+                width: calc(33.33% - 20px); /* Three photos per row on tablets */
+            }
+        }
+
+        @media (min-width: 900px) {
+            .photo-holder {
+                width: calc(25% - 20px); /* Four photos per row on desktop */
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="audio-controls">
-        <p>Cold Feet - The Ridleys</p>
-        <button onclick="toggleAudio()">Play/Pause</button>
-    </div>
+   
     
+    <!-- First Anniversary Letter -->
     <div class="letter-container">
-        <h2>How You Changed My Life</h2>
+        <div class="anniversary-tag">1st Anniversary</div>
+        <h2>Our First Year Together</h2>
         <div class="letter-content">
-            <p>My dearest,</p>
-            <p>Three years ago, you walked into my life and everything changed. Before you, I was just going through the motions, but you brought color to my world and purpose to my days.</p>
-            <p>You've taught me patience when I was restless, offered comfort when I was troubled, and given me strength when I was weak. With you, I've discovered parts of myself I never knew existed.</p>
-            <p>These past three years have been filled with growth, adventure, and so much joy. From our spontaneous road trips to our quiet evenings at home, every moment with you feels like a gift.</p>
-            <p>Thank you for being my partner, my confidant, and my best friend. Life is infinitely better with you in it.</p>
-            <p>Forever yours,</p>
-        </div>
-        
-        <div class="photo-gallery">
-            <div class="photo-holder">
-                <img src="photo1.jpg" alt="Memory 1">
-                <p>Our first vacation together</p>
-            </div>
-            <div class="photo-holder">
-                <img src="photo2.jpg" alt="Memory 2">
-                <p>The day we moved in</p>
-            </div>
-            <div class="photo-holder">
-                <img src="photo3.jpg" alt="Memory 3">
-                <p>That perfect sunset</p>
-            </div>
-            <div class="photo-holder">
-                <img src="photo4.jpg" alt="Memory 4">
-                <p>Our favorite restaurant</p>
-            </div>
+            <p>My Love,</p>
+            <p>Happy 1st anniversary to us! One year ago, we took a leap of faith—choosing love despite the miles between us. And here we are, stronger than ever, proving that distance is just a test of how far love can travel.</p>
+            <p>This year hasn't been easy, but every late-night call, every "good morning" text, and every countdown until we meet again has been worth it. You've turned ordinary moments into something extraordinary, even from afar.</p>
+            <p>I miss you more than words can say, but I'm also so proud of us. We've built trust, patience, and a love that doesn't waver, no matter the time zones or goodbyes.</p>
+            <p>Thank you for being my rock, my joy, and my favorite adventure. Here's to the memories we've made and the countless ones still to come.</p>
+            <p>I love you more than the distance between us.</p>
         </div>
     </div>
-    
+
+    <!-- Second Anniversary Letter -->
+    <div class="letter-container">
+        <div class="anniversary-tag">2nd Anniversary</div>
+        <h2>Still Choosing Us</h2>
+        <div class="letter-content">
+            <p>My Love,</p>
+            <p>Two years. Two whole years of loving you through screens, time zones, and the kind of distance that would've made weaker people give up. And yet, here we are—still stubborn, still stupidly in love, still proving every single day that this thing between us is bigger than any map could ever show.</p>
+            <p>I won't lie—there are moments when this feels impossible. When I see couples holding hands or hear about friends going on dumb little dinner dates, and it hits me all over again: we should've had that by now. But then I remember: we have something they'll never understand.</p>
+            <p>We built love out of nothing—no convenience, no easy touches, no shortcuts. Just us. Just choosing each other, again and again, even when it hurts. Even when the distance feels like it's gonna break me.</p>
+            <p>You're my favorite person. My best friend. The one I want to complain about traffic to, the one I want to grow old and grumpy with. And yeah, it kills me that I still don't know how you smell in the morning. But I do know how your voice goes soft when you're tired. I know the exact way you type when you're trying not to laugh. I know the way you love me—fully, fiercely, like distance is just some temporary bullshit we'll laugh about someday.</p>
+            
+        </div>
+    </div>
+
+    <div class="photo-gallery">
+        <div class="photo-holder">
+            <img src="qwwww.jpg" alt="Our first video call">
+            
+        </div>
+        <div class="photo-holder">
+            <img src="qwww.jpg" alt="Screenshots of our texts">
+            
+        </div>
+        <div class="photo-holder">
+            <img src="qww.jpg" alt="Matching profile pictures">
+            
+        </div>
+        <div class="photo-holder">
+            <img src="qw.jpg" alt="Time difference calculator">
+            
+        </div>
+    </div>
+
     <div class="navigation">
         <a href="index.html" class="nav-button">Previous</a>
         <a href="third.html" class="nav-button">Next</a>
     </div>
 
-    <audio id="background-music">
-        <source src="cold-feet.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <script>
-        // Audio toggle function
-        function toggleAudio() {
-            const audio = document.getElementById('background-music');
-            
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-    </script>
 </body>
-  </html>
+</html>
